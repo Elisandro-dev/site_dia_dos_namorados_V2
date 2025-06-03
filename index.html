@@ -1,44 +1,83 @@
-
 <!DOCTYPE html>
-<html lang="pt">
+<html lang="pt-br">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Nosso Amor - Especial</title>
-    <link rel="stylesheet" href="style.css">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Feliz Dia dos Namorados 💘</title>
+  <link rel="stylesheet" href="style.css" />
+  <script>
+    function tocarMusica() {
+      const audio = document.getElementById("audio");
+      audio.play();
+      document.getElementById("botao-musica").style.display = "none";
+    }
+  </script>
 </head>
 <body>
-    <section id="dia-dos-namorados">
-        <h1>Feliz Dia dos Namorados, meu amor ❤️</h1>
-        <p>Hoje é mais um capítulo do nosso amor, e eu só consigo agradecer por ter você aqui comigo.</p>
-        <audio autoplay loop>
-            <source src="musica/namorados.mp3" type="audio/mpeg">
-        </audio>
-        <div class="container">
-            <div class="photo"><img src="imagens/imagem2 (1).jpg"><p class="caption">“Te amar não é sobre prometer o mundo. É só estar aqui, inteiro, pra você.”</p></div>
-<div class="photo"><img src="imagens/imagem2 (2).JPG"><p class="caption">“Entre mil coisas que eu poderia ser, escolho ser teu abrigo.”</p></div>
-<div class="photo"><img src="imagens/imagem2 (3).jpg"><p class="caption">“Tem dias que eu só queria caber no teu colo e esquecer do resto.”</p></div>
-<div class="photo"><img src="imagens/imagem2 (4).jpg"><p class="caption">“Você não faz barulho... mas muda tudo quando chega.”</p></div>
-<div class="photo"><img src="imagens/imagem2 (5).jpg"><p class="caption">“Te ouvir me faz bem. Te ver rindo muda meu dia. Te ter é o que me faz ficar.”</p></div>
-<div class="photo"><img src="imagens/imagem2 (6).jpg"><p class="caption">“Nem todo dia é leve, mas com você nenhum é em vão.”</p></div>
-<div class="photo"><img src="imagens/imagem2 (7).jpg"><p class="caption">“Te amo no que é bonito... mas também nas bagunças que só a gente entende.”</p></div>
-<div class="photo"><img src="imagens/imagem2 (8).jpg"><p class="caption">“O jeito que você me olha é o que me segura quando o mundo gira demais.”</p></div>
-<div class="photo"><img src="imagens/imagem2 (9).JPG"><p class="caption">“Se for pra repetir alguma coisa na vida, que seja nós dois.”</p></div>
-<div class="photo"><img src="imagens/imagem2 (10).jpg"><p class="caption">“Eu sei que sou chato… mas não existe nada que eu não faria por você. Eu te amo muito, ontem menos que hoje e hoje muito menos que amanhã.”</p></div>
+  <audio id="audio" loop>
+    <source src="musica/namorados.mp3" type="audio/mpeg">
+    Seu navegador não suporta áudio HTML5.
+  </audio>
 
-        </div>
-        <button onclick="document.getElementById('aniversario').scrollIntoView({ behavior: 'smooth' });">Ver o Aniversário</button>
-    </section>
+  <button id="botao-musica" onclick="tocarMusica()">Tocar música do amor 💖</button>
 
-    <section id="aniversario">
-        <h1>Feliz Aniversário Meu Amor <span class="heart">❤️</span><br>
-        <small>Parabéns pelo seu dia, estou muito feliz de poder comemorar mais um ano de vida ao seu lado.</small></h1>
-        <audio controls loop>
-            <source src="musica/musica.mp3" type="audio/mpeg">
-        </audio>
-        <div class="footer">
-            <p>Site criado por Elisandro Varela, para o amor da minha vida Daniela Tavares.</p>
-        </div>
-    </section>
+  <div class="container">
+    <h1>Feliz Dia dos Namorados 💘</h1>
+
+    <div class="foto">
+      <img src="imagens/imagem2 (1).jpg" alt="Foto 1">
+      <p>“Te amar não é sobre prometer o mundo. É só estar aqui, inteiro, pra você.”</p>
+    </div>
+
+    <div class="foto">
+      <img src="imagens/imagem2 (2).JPG" alt="Foto 2">
+      <p>“Entre mil coisas que eu poderia ser, escolho ser teu abrigo.”</p>
+    </div>
+
+    <div class="foto">
+      <img src="imagens/imagem2 (3).jpg" alt="Foto 3">
+      <p>“Tem dias que eu só queria caber no teu colo e esquecer do resto.”</p>
+    </div>
+
+    <div class="foto">
+      <img src="imagens/imagem2 (4).jpg" alt="Foto 4">
+      <p>“Você não faz barulho... mas muda tudo quando chega.”</p>
+    </div>
+
+    <div class="foto">
+      <img src="imagens/imagem2 (5).jpg" alt="Foto 5">
+      <p>“Você é o meu lugar seguro, o meu lar em forma de gente.”</p>
+    </div>
+
+    <div class="foto">
+      <img src="imagens/imagem2 (6).jpg" alt="Foto 6">
+      <p>“Até o silêncio é bom quando é com você.”</p>
+    </div>
+
+    <div class="foto">
+      <img src="imagens/imagem2 (7).jpg" alt="Foto 7">
+      <p>“Me perdi no teu abraço e não quero mais me encontrar.”</p>
+    </div>
+
+    <div class="foto">
+      <img src="imagens/imagem2 (8).jpg" alt="Foto 8">
+      <p>“Você é o detalhe que faltava no meu sorriso.”</p>
+    </div>
+
+    <div class="foto">
+      <img src="imagens/imagem2 (9).JPG" alt="Foto 9">
+      <p>“Se for pra repetir alguma coisa na vida, que seja nós dois.”</p>
+    </div>
+
+    <div class="foto">
+      <img src="imagens/imagem2 (10).jpg" alt="Foto 10">
+      <p>“Você é o meu sempre preferido.”</p>
+    </div>
+
+    <footer>
+      <p>Este site foi feito com amor para celebrar nosso Dia dos Namorados.</p>
+    </footer>
+  </div>
 </body>
 </html>
+
