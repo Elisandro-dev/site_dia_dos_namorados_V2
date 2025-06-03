@@ -6,24 +6,41 @@
   <title>Feliz Dia dos Namorados 💘</title>
   <link rel="stylesheet" href="style.css" />
   <script>
+    let slideIndex = 0;
+
+    function mostrarSlidesManual(index) {
+      const slides = document.querySelectorAll(".slide");
+      if (index >= slides.length) slideIndex = 0;
+      else if (index < 0) slideIndex = slides.length - 1;
+      else slideIndex = index;
+
+      slides.forEach((slide, i) => {
+        slide.style.display = i === slideIndex ? "block" : "none";
+      });
+    }
+
     function tocarMusica() {
       const audio = document.getElementById("audio");
       audio.play();
       document.getElementById("botao-musica").style.display = "none";
     }
 
-    let slideIndex = 0;
-    function mostrarSlides() {
-      const slides = document.querySelectorAll(".slide");
-      slides.forEach((slide, i) => {
-        slide.style.display = i === slideIndex ? "block" : "none";
-      });
-      slideIndex = (slideIndex + 1) % slides.length;
-    }
-
     window.onload = function () {
-      mostrarSlides();
-      setInterval(mostrarSlides, 4000); // troca a cada 4s
+      mostrarSlidesManual(slideIndex);
+
+      // Suporte a toque (touch)
+      const carrossel = document.querySelector(".carrossel");
+      let startX = 0;
+
+      carrossel.addEventListener("touchstart", (e) => {
+        startX = e.touches[0].clientX;
+      });
+
+      carrossel.addEventListener("touchend", (e) => {
+        let endX = e.changedTouches[0].clientX;
+        if (startX - endX > 50) mostrarSlidesManual(slideIndex + 1); // desliza pra esquerda
+        else if (endX - startX > 50) mostrarSlidesManual(slideIndex - 1); // desliza pra direita
+      });
     };
   </script>
 </head>
@@ -79,6 +96,9 @@
         <img src="imagens/imagem2 (10).jpg" alt="Foto 10">
         <p>“Eu sei que sou chato... mas não existe nada que eu não faria por você.”</p>
       </div>
+
+      <button class="anterior" onclick="mostrarSlidesManual(slideIndex - 1)">⟨</button>
+      <button class="proximo" onclick="mostrarSlidesManual(slideIndex + 1)">⟩</button>
     </div>
 
     <footer>
