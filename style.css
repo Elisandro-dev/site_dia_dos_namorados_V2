@@ -1,0 +1,73 @@
+
+body {
+    background-color: black;
+    color: white;
+    text-align: center;
+    font-family: 'Poppins', sans-serif;
+    margin: 0;
+    padding: 0;
+}
+#dia-dos-namorados {
+    background: linear-gradient(to top right, #ff758c, #ff7eb3);
+    padding: 40px 20px;
+}
+#dia-dos-namorados h1 {
+    font-size: 36px;
+}
+#dia-dos-namorados p {
+    font-size: 20px;
+    margin-bottom: 20px;
+}
+#dia-dos-namorados button {
+    margin-top: 20px;
+    background-color: white;
+    color: black;
+    border: none;
+    padding: 10px 20px;
+    font-size: 16px;
+    border-radius: 10px;
+    cursor: pointer;
+}
+.container {
+    width: 100%;
+    max-width: 600px;
+    margin: auto;
+    padding: 20px;
+}
+.photo {
+    margin-bottom: 30px;
+}
+img {
+    width: 100%;
+    border-radius: 15px;
+}
+.caption {
+    font-size: 18px;
+    font-style: italic;
+    margin-top: 10px;
+    background: rgba(255, 255, 255, 0.1);
+    padding: 10px;
+    border-radius: 10px;
+}
+h1 {
+    font-size: 32px;
+    font-weight: bold;
+    margin: 40px 0 20px;
+}
+.heart {
+    display: inline-block;
+    font-size: 24px;
+    animation: pulse 1.5s infinite;
+    color: red;
+}
+@keyframes pulse {
+    0% { transform: scale(1); }
+    50% { transform: scale(1.2); }
+    100% { transform: scale(1); }
+}
+.footer {
+    margin-top: 40px;
+    font-size: 12px;
+    opacity: 0.8;
+    text-transform: uppercase;
+}
