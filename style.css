@@ -1,92 +1,104 @@
 
 body {
-    background-color: black;
-    color: white;
-    text-align: center;
-    font-family: 'Poppins', sans-serif;
-    margin: 0;
-    padding: 0;
+  margin: 0;
+  padding: 0;
+  background-color: #000;
+  color: #f5c6cb;
+  font-family: 'Segoe UI', sans-serif;
+  text-align: center;
+  overflow-x: hidden;
 }
-#dia-dos-namorados {
-    background: linear-gradient(to top right, #ff758c, #ff7eb3);
-    padding: 40px 20px;
+
+.conteudo {
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 40px 20px;
+  position: relative;
 }
-#dia-dos-namorados h1 {
-    font-size: 36px;
-}
-#dia-dos-namorados p {
-    font-size: 20px;
-    margin-bottom: 20px;
-}
-#dia-dos-namorados button {
-    margin-top: 20px;
-    background-color: white;
-    color: black;
-    border: none;
-    padding: 10px 20px;
-    font-size: 16px;
-    border-radius: 10px;
-    cursor: pointer;
-}
-.container {
-    width: 100%;
-    max-width: 600px;
-    margin: auto;
-    padding: 20px;
-}
-.photo {
-    margin-bottom: 30px;
-}
-img {
-    width: 100%;
-    border-radius: 15px;
-}
-.caption {
-    font-size: 18px;
-    font-style: italic;
-    margin-top: 10px;
-    background: rgba(255, 255, 255, 0.1);
-    padding: 10px;
-    border-radius: 10px;
-}
+
 h1 {
-    font-size: 32px;
-    font-weight: bold;
-    margin: 40px 0 20px;
+  font-size: 2.5rem;
+  margin-bottom: 20px;
+  color: #f5c6cb;
 }
-.heart {
-    display: inline-block;
-    font-size: 24px;
-    animation: pulse 1.5s infinite;
-    color: red;
-}
-@keyframes pulse {
-    0% { transform: scale(1); }
-    50% { transform: scale(1.2); }
-    100% { transform: scale(1); }
-}
-.footer {
-    margin-top: 40px;
-    font-size: 12px;
-    opacity: 0.8;
-    text-transform: uppercase;
-}
+
 #botao-musica {
   background-color: #ff3366;
   color: white;
   border: none;
-  padding: 15px 30px;
-  font-size: 1.2rem;
+  padding: 12px 25px;
+  font-size: 1.1rem;
   border-radius: 30px;
   cursor: pointer;
-  box-shadow: 0 5px 15px rgba (255, 51, 102, 0.4);
+  box-shadow: 0 5px 15px rgba(255, 51, 102, 0.4);
   transition: background-color 0.3s ease, transform 0.2s ease;
-  margin: 30px auto;
-  display: block;
+  margin-bottom: 30px;
 }
 
-#botao-musica: hover {
+#botao-musica:hover {
   background-color: #ff1a4d;
   transform: scale(1.05);
 }
 
+.carrossel {
+  position: relative;
+  width: 100%;
+  height: auto;
+}
+
+.slide {
+  display: none;
+  animation: fade 0.6s ease-in-out;
+}
+
+@keyframes fade {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+.slide img {
+  width: 100%;
+  max-height: 500px;
+  object-fit: cover;
+  border-radius: 20px;
+  box-shadow: 0 0 20px rgba(255, 255, 255, 0.1);
+}
+
+.slide p {
+  font-size: 1.3rem;
+  font-style: italic;
+  margin-top: 15px;
+  color: #f5c6cb;
+}
+
+.anterior, .proximo {
+  position: absolute;
+  top: 45%;
+  transform: translateY(-50%);
+  background-color: rgba(255, 51, 102, 0.8);
+  color: white;
+  border: none;
+  font-size: 2rem;
+  padding: 10px 15px;
+  cursor: pointer;
+  border-radius: 50%;
+  box-shadow: 0 0 10px rgba(255, 51, 102, 0.5);
+}
+
+.anterior {
+  left: -20px;
+}
+
+.proximo {
+  right: -20px;
+}
+
+.anterior:hover, .proximo:hover {
+  background-color: #ff1a4d;
+}
+
+footer {
+  margin-top: 40px;
+  font-size: 1rem;
+  color: #999;
+}
