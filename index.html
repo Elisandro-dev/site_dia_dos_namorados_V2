@@ -11,68 +11,74 @@
       audio.play();
       document.getElementById("botao-musica").style.display = "none";
     }
+
+    let slideIndex = 0;
+    function mostrarSlides() {
+      const slides = document.querySelectorAll(".slide");
+      slides.forEach((slide, i) => {
+        slide.style.display = i === slideIndex ? "block" : "none";
+      });
+      slideIndex = (slideIndex + 1) % slides.length;
+    }
+
+    window.onload = function () {
+      mostrarSlides();
+      setInterval(mostrarSlides, 4000); // troca a cada 4s
+    };
   </script>
 </head>
 <body>
-  <audio id="audio" loop>
+  <audio id="audio">
     <source src="musica/namorados.mp3" type="audio/mpeg">
     Seu navegador não suporta áudio HTML5.
   </audio>
 
- <button id="botao-musica" onclick="tocarMusica()">❤️ Tocar música do amor ❤️</button>
-
-  <div class="container">
+  <div class="conteudo">
     <h1>Feliz Dia dos Namorados 💘</h1>
 
-    <div class="foto">
-       <img src="imagens/imagem2 (2).JPG" alt="Foto 2">
-      <p>“Te amar não é sobre prometer o mundo. É só estar aqui, inteiro, pra você.”</p>
-    </div>
+    <button id="botao-musica" onclick="tocarMusica()">❤️ Tocar música do amor</button>
 
-    <div class="foto">
-      <img src="imagens/imagem2 (1).jpg" alt="Foto 1"> 
-      <p>“Entre mil coisas que eu poderia ser, escolho ser teu abrigo.”</p>
-    </div>
-
-    <div class="foto">
-      <img src="imagens/imagem2 (3).jpg" alt="Foto 3">
-      <p>“Tem dias que eu só queria deitar no teu colo e esquecer do resto.”</p>
-    </div>
-
-    <div class="foto">
-      <img src="imagens/imagem2 (4).jpg" alt="Foto 4">
-      <p>“Você não faz barulho... mas muda tudo quando chega.”</p>
-    </div>
-
-    <div class="foto">
-      <img src="imagens/imagem2 (5).jpg" alt="Foto 5">
-      <p>“Você é o meu lugar seguro, o meu lar em forma de gente.”</p>
-    </div>
-
-    <div class="foto">
-      <img src="imagens/imagem2 (6).jpg" alt="Foto 6">
-      <p>“Até o silêncio é bom quando é com você.”</p>
-    </div>
-
-    <div class="foto">
-      <img src="imagens/imagem2 (7).jpg" alt="Foto 7">
-      <p>“Me perdi no teu abraço e não quero mais me encontrar.”</p>
-    </div>
-
-    <div class="foto">
-      <img src="imagens/imagem2 (8).jpg" alt="Foto 8">
-      <p>“Você é o detalhe que faltava no meu sorriso.”</p>
-    </div>
-
-    <div class="foto">
-      <img src="imagens/imagem2 (9).JPG" alt="Foto 9">
-      <p>“Se for pra repetir alguma coisa na vida, que seja nós dois.”</p>
-    </div>
-
-    <div class="foto">
-      <img src="imagens/imagem2 (10).jpg" alt="Foto 10">
-      <p>“Eu sei que sou chato... mas não existe nada que eu não faria por você, 
-        eu te amo hoje mais do que ontem, e hoje muito menos que amanhã.”</p>
+    <div class="carrossel">
+      <div class="slide">
+        <img src="imagens/imagem2 (1).jpg" alt="Foto 1">
+        <p>“Entre mil coisas que eu poderia ser, escolho ser teu abrigo.”</p>
+      </div>
+      <div class="slide">
+        <img src="imagens/imagem2 (2).JPG" alt="Foto 2">
+        <p>“Te amar não é sobre prometer o mundo. É só estar aqui, inteiro, pra você.”</p>
+      </div>
+      <div class="slide">
+        <img src="imagens/imagem2 (3).jpg" alt="Foto 3">
+        <p>“Tem dias que eu só queria deitar no teu colo e esquecer do resto.”</p>
+      </div>
+      <div class="slide">
+        <img src="imagens/imagem2 (4).jpg" alt="Foto 4">
+        <p>“Você não faz barulho... mas muda tudo quando chega.”</p>
+      </div>
+      <div class="slide">
+        <img src="imagens/imagem2 (5).jpg" alt="Foto 5">
+        <p>“Você é o meu lugar seguro, o meu lar em forma de gente.”</p>
+      </div>
+      <div class="slide">
+        <img src="imagens/imagem2 (6).jpg" alt="Foto 6">
+        <p>“Até o silêncio é bom quando é com você.”</p>
+      </div>
+      <div class="slide">
+        <img src="imagens/imagem2 (7).jpg" alt="Foto 7">
+        <p>“Me perdi no teu abraço e não quero mais me encontrar.”</p>
+      </div>
+      <div class="slide">
+        <img src="imagens/imagem2 (8).jpg" alt="Foto 8">
+        <p>“Você é o detalhe que faltava no meu sorriso.”</p>
+      </div>
+      <div class="slide">
+        <img src="imagens/imagem2 (9).JPG" alt="Foto 9">
+        <p>“Se for pra repetir alguma coisa na vida, que seja nós dois.”</p>
+      </div>
+      <div class="slide">
+        <img src="imagens/imagem2 (10).jpg" alt="Foto 10">
+        <p>“Eu sei que sou chato... mas não existe nada que eu não faria por você.”</p>
+      </div>
     </div>
 
     <footer>
@@ -81,4 +87,5 @@
   </div>
 </body>
 </html>
+
 
