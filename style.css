@@ -71,3 +71,22 @@ h1 {
     opacity: 0.8;
     text-transform: uppercase;
 }
+#botao-musica {
+  background-color: #ff3366;
+  color: white;
+  border: none;
+  padding: 15px 30px;
+  font-size: 1.2rem;
+  border-radius: 30px;
+  cursor: pointer;
+  box-shadow: 0 5px 15px rgba (255, 51, 102, 0.4);
+  transition: background-color 0.3s ease, transform 0.2s ease;
+  margin: 30px auto;
+  display: block;
+}
+
+#botao-musica: hover {
+  background-color: #ff1a4d;
+  transform: scale(1.05);
+}
+
